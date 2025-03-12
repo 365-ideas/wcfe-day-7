@@ -70,6 +70,7 @@ export default function HomePage() {
 
 const Icon = ({ setLoaderFinished }) => {
   const iconRef = useRef();
+  const iconInit = useAnimation();
   const starAnim = useAnimation();
   const verticalLine1Anim = useAnimation();
   const verticalLine2Anim = useAnimation();
@@ -78,6 +79,9 @@ const Icon = ({ setLoaderFinished }) => {
 
   useEffect(() => {
     const iconAnim = async () => {
+      await iconInit.set({
+        opacity: 1,
+      });
       await starAnim.set({
         rotate: "45deg",
         scale: 1.2,
@@ -151,7 +155,7 @@ const Icon = ({ setLoaderFinished }) => {
   }, [iconRef]);
 
   return (
-    <svg
+    <motion.svg
       width="1094"
       height="1080"
       className="icon-wrapper"
@@ -159,6 +163,7 @@ const Icon = ({ setLoaderFinished }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       ref={iconRef}
+      animate={iconInit}
     >
       <motion.g
         clip-path="url(#clip0_1190_750)"
@@ -238,6 +243,6 @@ const Icon = ({ setLoaderFinished }) => {
           <rect width="1094" height="1080" fill="white" />
         </clipPath>
       </defs>
-    </svg>
+    </motion.svg>
   );
 };
