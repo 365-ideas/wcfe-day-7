@@ -1,15 +1,94 @@
 .home {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: VW(10);
+  position: relative;
+  overflow: hidden;
 
-  .logo {
-    width: VW(580);
-    height: VW(120);
+  .container {
+    margin: 0 VW(25);
+    padding: 0;
     position: relative;
+    height: 100%;
+  }
+
+  .icon {
+    &-wrapper {
+      width: VW(1100);
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      right: VW(110);
+    }
+
+    &-anim {
+      transform-origin: 38.7% 61.7%;
+    }
+  }
+
+  .left {
+    position: absolute;
+    left: 0;
+    top: -5%;
+    bottom: VW(20);
+    display: flex;
+    flex-direction: column;
+    gap: VW(150);
+    
+    .bottom {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      gap: VW(40);      
+      
+      .text-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+
+        .text-top {
+          display: flex;
+          gap: VW(70);
+        }
+
+        p {
+          width: VW(200);
+        }
+      }
+    }
+  }
+  
+  .right {
+    position: absolute;
+    right: VW(20);
+    top: VW(200);
+    bottom: 0;
+    width: VW(700);
+
+    .top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: VW(60);
+
+      .text-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: VW(60);
+      }
+
+      .text {
+        width: VW(240);
+        text-align: end;
+      }
+    }
+
+    .bottom {
+      position: absolute;
+      bottom: 8%;
+      right: 0;
+      text-align: end;
+      text-wrap: nowrap;
+    }
   }
 }

@@ -26,6 +26,17 @@ const inter = localFont({
   variable: "--font-inter",
 });
 
+const segment = localFont({
+  src: [
+    {
+      path: "./fonts/SegmentAKeyTrial-Regular.woff",
+      weight: "normal",
+      style: "normal",
+    }
+  ],
+  variable: "--font-segment", 
+});
+
 export const metadata = {
   title: "We're Creating For Emotions",
   description: "Day # | We're Creating For Emotions",
@@ -34,7 +45,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html className="html" lang="en">
-      <body className={`body ${inter.variable}`}>
+      <body className={`body ${inter.variable} ${segment.variable}`}>
         <LoaderProvider>
           <ResponceBlocker />
           <Root>

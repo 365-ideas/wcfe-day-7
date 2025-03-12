@@ -1,22 +1,32 @@
 @import "./mixins";
 
 %h1 {
-  font-family: var(--font-inter), sans-serif;
-  font-size: VW(60);
+  font-family: var(--font-segment), sans-serif;
+  font-size: VW(350);
   font-style: normal;
-  font-weight: bold;
-  line-height: 142%;
+  font-weight: 400;
+  line-height: 80%;
   text-transform: uppercase;
-  letter-spacing: normal;
+  letter-spacing: -0.6vw;
+}
+
+%h2 {
+  font-size: VW(22);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: -0.04vw;
+  text-transform: uppercase
 }
 
 %body-text {
   font-family: var(--font-inter), sans-serif;
-  font-size: VW(20);
+  font-size: VW(16);
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
-  letter-spacing: -0.06vw;
+  letter-spacing: -0.04vw;
+  text-transform: uppercase
 }
 
 %link {
